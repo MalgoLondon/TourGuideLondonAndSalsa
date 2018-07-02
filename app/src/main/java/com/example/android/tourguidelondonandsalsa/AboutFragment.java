@@ -18,13 +18,14 @@ public class AboutFragment extends Fragment {
         // Required empty public constructor
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        TextView textView = new TextView(getActivity());
-        textView.setText(R.string.hello_blank_fragment);
-        return textView;
+        View rootView = inflater.inflate(R.layout.about_fragment, container, false);
+        TextView aboutView = rootView.findViewById(R.id.about_text_view);
+        aboutView.setText(R.string.welcome);
+        return rootView;
     }
+
 
 }

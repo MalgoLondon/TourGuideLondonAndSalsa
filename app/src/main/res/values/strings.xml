@@ -8,4 +8,5 @@
     <string name="tab_restaurants">restaurants</string>
     <string name="tab_salsa">salsa</string>
     <string name="PlaceChosen">PlaceChosen</string>
+    <string name="welcome"><![CDATA[Welcome! \nThis app will provide you an overview of hand-picked destinations in London for: \nfood \nsightseeing\nand salsa dancing\nENJOY YOUR VISIT!]]></string>
 </resources>
