@@ -1,10 +1,7 @@
 package com.example.android.tourguidelondonandsalsa;
 
 
-import android.content.Context;
 import android.content.Intent;
-import android.media.AudioManager;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -12,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -52,7 +48,7 @@ public class RestaurantsFagment extends Fragment {
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
         // word_list.xml file.
-        ListView listView = (ListView) rootView.findViewById(R.id.list);
+        ListView listView = rootView.findViewById(R.id.list);
 
         // Make the {@link ListView} use the {@link ArrayAdapter} we created above, so that the
         // {@link ListView} will display list items for each word in the list of words.
@@ -67,6 +63,7 @@ public class RestaurantsFagment extends Fragment {
                 // Release the media player if it currently exists because we are about to
                 // play a different sound file
                 Intent intent = new Intent(getActivity(), DetailActivity.class);
+                intent.putExtra(getString(R.string.PlaceChosen), places.get(position));
                 startActivity(intent);
             }
 
